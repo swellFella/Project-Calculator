@@ -8,7 +8,7 @@ body{
     display: grid;
     background-color: rgb(79, 79, 79);
     min-width: 400px;
-    min-height: 600px;
+    height: auto;
     gap: 10px;
     border-radius: 5px;
     
@@ -17,10 +17,10 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
+    overflow: auto;
     border: solid;
     margin: 5% 5% 0 5%;
-    padding: 20px 20px 10px 20px;
+    padding: 60px 20px 10px 20px;
 
     font-size: 40px;
     background-color: rgba(203, 228, 170, 0.646)
