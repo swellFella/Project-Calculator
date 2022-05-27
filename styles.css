@@ -7,7 +7,7 @@ body{
 #calculator-container{
     display: grid;
     background-color: rgb(79, 79, 79);
-    min-width: 400px;
+    width: 400px;
     height: auto;
     gap: 10px;
     border-radius: 5px;
@@ -25,7 +25,7 @@ body{
     padding-left: 10px;
     height: 150px;
 
-    font-size: 40px;
+    font-size: 30px;
     background-color: rgba(203, 228, 170, 0.646)
 }
 #button-container{
@@ -52,6 +52,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 
     background-color: rgba(255, 255, 255, 0.658);
 }
