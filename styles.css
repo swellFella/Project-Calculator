@@ -1,23 +1,29 @@
 body{
     display: flex;
     justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
 }
 #calculator-container{
     display: grid;
-    background-color: gray;
+    background-color: rgb(79, 79, 79);
     min-width: 400px;
     min-height: 600px;
     gap: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     
 }
 #screen{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
 
     border: solid;
     margin: 5% 5% 0 5%;
+    padding: 20px 20px 10px 20px;
+
+    font-size: 40px;
+    background-color: rgba(203, 228, 170, 0.646)
 }
 #button-container{
     display: grid;
@@ -33,12 +39,19 @@ body{
 #del-button{
     grid-column: 3/5;
 }
+#clear-button, #del-button{
+    background-color: rgba(255, 98, 98, 0.769);
+}
 .button{
-    width: auto;
-    height: auto;
+    padding: 20px;
     border: solid;
-
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.658);
+}
+.operator-button{
+    background-color: rgb(215, 137, 2);
 }
