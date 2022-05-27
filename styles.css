@@ -1,18 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+}
 #calculator-container{
     display: grid;
     background-color: gray;
-    width: 200px;
-    height: 200px;
+    min-width: 400px;
+    min-height: 600px;
+    gap: 10px;
+    border-radius: 10px;
+    
 }
 #screen{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border: solid;
+    margin: 5% 5% 0 5%;
 }
 #button-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);;
+    gap: 10px;
+    margin: 0 5% 5% 5%;
+    
 }
 #clear-button{
     grid-column: 1/3;
