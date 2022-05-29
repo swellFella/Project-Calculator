@@ -10,16 +10,22 @@ let b = 0;
 let symbol = '';
 numberButtons.forEach(button=>{
     button.setAttribute('value', button.textContent);
+    if(operandOutput.textContent.substring(0,3) === 'ANS')
+        {
+            return;
+        }
+    else{
+        button.addEventListener('click', () => {
+                if(currentOutput.textContent.length < 12 && currentOutput.textContent.charAt(0) !== '0'){
+                    currentOutput.textContent += button.textContent;
+                }
+                else if(currentOutput.textContent.length < 12){
+                    currentOutput.textContent = currentOutput.textContent.substring(1);
+                    currentOutput.textContent += button.textContent;
+                }
+            });
+        }
     
-    button.addEventListener('click', () => {
-        if(currentOutput.textContent.length < 12 && currentOutput.textContent.charAt(0) !== '0'){
-            currentOutput.textContent += button.textContent;
-        }
-        else if(currentOutput.textContent.length < 12){
-            currentOutput.textContent = currentOutput.textContent.substring(1);
-            currentOutput.textContent += button.textContent;
-        }
-    });
 });
 
 clearButton.addEventListener('click', () => {
@@ -33,6 +39,10 @@ deleteButton.addEventListener('click', () => {
 
 operandButtons.forEach(button => {
     button.addEventListener('click', () => {
+        if(operandOutput.textContent.substring(0,3) === 'ANS')
+        {
+            return;
+        }
         symbol = button.textContent;
         operandOutput.textContent += `${currentOutput.textContent}`
         a = parseInt(currentOutput.textContent);
@@ -46,7 +56,7 @@ equalsButton.addEventListener('click', function(){
     finalNumber = operandOutput.textContent + currentOutput.textContent;
     operandOutput.textContent = `ANS ${evaluateString(finalNumber)}`;
     currentOutput.textContent = '';
-    
+    currentOutput.textContent = 'Press clear'
     document.querySelectorAll('.number-button').setAttribute('disabled');
 });
 
